@@ -165,8 +165,8 @@
                             <div class="form-group">
                                 <label for="sabor">Sabor</label>
                                 <select id="sabor" class="form-control">
-                                    <option value="">Selecione o Estilo</option>
-                                    <option value="">Selecione o Estilo</option>
+                                    <option value="">Selecione o sabor</option>
+                                    <option value="">Adocicado</option>
 
                                 </select>
                             </div>
@@ -175,69 +175,104 @@
                             <div class="form-group">
                                 <label for="teorAlcoolico">Teor Alcoolico</label>
                                 <div class="input-group">
-                                    <input id="teorAlcoolico" class="form-control" placeholder="Teor Alcoolico">
+                                    <input id="teorAlcoolico"  type="text" class="form-control">
                                     <div class="input-group-addon">%</div>
                                 </div>
                             </div>
                         </div>
+                        <div class="col-lg-3 col-sm-6 form-group">
+                            <label for="origem">Origem</label>
+                            <div>
+                                <div class="radio radio-inline">
+                                    <input name="origem" type="radio">
+                                    <label>Nacional</label>
+                                </div>
+                                <div class="radio radio-inline">
+                                    <input name="origem" type="radio">
+                                    <label>Internacional</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="preco">Preço</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">R$</div>
+                                    <input id="preco"  type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="comissao">Comissao</label>
+                                <div class="input-group">
+                                    <input id="comissao"  type="text" class="form-control">
+                                    <div class="input-group-addon">%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="estoque">Estoque</label>
+                                <input id="estoque"  type="text" class="form-control">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <button class="btn  btn-primary" type="submit">Salvar</button>
-                        <a href="pesquisa-produtos.html" class="btn  btn-default">Cancelar</a>
-                        <a href="#" class="btn  btn-link  aw-btn-link-danger" onclick="excluir()">Excluir este
-                            produto</a>
-                    </div>
-
-                </form>
+            <div class="form-group">
+                <button class="btn  btn-primary" type="submit">Salvar</button>
             </div>
 
-            <script>
-                function excluir() {
-                    swal({
-                        title: "Tem certeza?",
-                        text: "Você não poderá recuperar o produto após a exclusão.",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Sim, exclua agora!",
-                        closeOnConfirm: false,
-                        showLoaderOnConfirm: true
-                    }, function () {
-                        setTimeout(function () {
-                            swal("Excluído!", "O produto foi excluído com sucesso.", "success");
-                        }, 2000);
-                    });
-                }
-            </script>
-
-        </section>
-
-        <footer class="aw-layout-footer  js-content">
-            <div class="container-fluid">
-                <span class="aw-footer-disclaimer">&copy; 2016 AlgaWorks. Todos os direitos reservados.</span>
-            </div>
-        </footer>
-
+            </form>
     </div>
 
-    <div class="aw-search-modal  js-search-modal">
-        <form action="#" class="aw-search-modal__form">
-            <input class="aw-search-modal__input  js-search-modal-input" type="text"
-                   placeholder="O que você está procurando?"/>
-            <div class="aw-search-modal__input-icon">
-                <i class="glyphicon  glyphicon-search  js-search-modal-go"></i>
-            </div>
-        </form>
+    <script>
+        function excluir() {
+            swal({
+                title: "Tem certeza?",
+                text: "Você não poderá recuperar o produto após a exclusão.",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Sim, exclua agora!",
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true
+            }, function () {
+                setTimeout(function () {
+                    swal("Excluído!", "O produto foi excluído com sucesso.", "success");
+                }, 2000);
+            });
+        }
+    </script>
 
-        <div class="aw-search-modal__controls">
-            <i class="glyphicon glyphicon-remove  js-search-modal-close"></i>
+    </section>
+
+    <footer class="aw-layout-footer  js-content">
+        <div class="container-fluid">
+            <span class="aw-footer-disclaimer">&copy; 2016 AlgaWorks. Todos os direitos reservados.</span>
         </div>
-    </div>
+    </footer>
 
-    <script src="/layout/javascripts/vendors.min.js"></script>
-    <script src="/layout/javascripts/algaworks.min.js"></script>
+</div>
+
+<div class="aw-search-modal  js-search-modal">
+    <form action="#" class="aw-search-modal__form">
+        <input class="aw-search-modal__input  js-search-modal-input" type="text"
+               placeholder="O que você está procurando?"/>
+        <div class="aw-search-modal__input-icon">
+            <i class="glyphicon  glyphicon-search  js-search-modal-go"></i>
+        </div>
+    </form>
+
+    <div class="aw-search-modal__controls">
+        <i class="glyphicon glyphicon-remove  js-search-modal-close"></i>
+    </div>
+</div>
+
+<script src="/layout/javascripts/vendors.min.js"></script>
+<script src="/layout/javascripts/algaworks.min.js"></script>
 </div>
 </body>
 </html>
