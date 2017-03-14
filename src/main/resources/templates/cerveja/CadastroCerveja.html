@@ -47,13 +47,21 @@
                 <div class="col-sm-3">
                     <div class="form-group">
                         <label for="estilo">Estilo</label>
-                        <select id="estilo" class="form-control">
-                            <option value="">Selecione o Estilo</option>
-                            <option value="">Selecione o Estilo</option>
+                        <div class="bw-field-action">
+                            <select id="estilo" class="form-control">
+                                <option value="">Selecione o Estilo</option>
+                                <option value="">Selecione o Estilo</option>
 
-                        </select>
+                            </select>
+                            <div class="bw-field-action__icon">
+                                <a href="#" data-toggle="modal" data-target="#estilo-modal">
+                                    <i class="glyphicon glyphicon-plus-sign bw-glyphicon-large"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
 
                 <div class="col-sm-3">
                     <div class="form-group">
@@ -122,25 +130,25 @@
         </form>
     </div>
 
-    <script>
-        function excluir() {
-            swal({
-                title: "Tem certeza?",
-                text: "Você não poderá recuperar o produto após a exclusão.",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Sim, exclua agora!",
-                closeOnConfirm: false,
-                showLoaderOnConfirm: true
-            }, function () {
-                setTimeout(function () {
-                    swal("Excluído!", "O produto foi excluído com sucesso.", "success");
-                }, 2000);
-            });
-        }
-    </script>
-
+    <!--<script>-->
+        <!--function excluir() {-->
+            <!--swal({-->
+                <!--title: "Tem certeza?",-->
+                <!--text: "Você não poderá recuperar o produto após a exclusão.",-->
+                <!--type: "warning",-->
+                <!--showCancelButton: true,-->
+                <!--confirmButtonColor: "#DD6B55",-->
+                <!--confirmButtonText: "Sim, exclua agora!",-->
+                <!--closeOnConfirm: false,-->
+                <!--showLoaderOnConfirm: true-->
+            <!--}, function () {-->
+                <!--setTimeout(function () {-->
+                    <!--swal("Excluído!", "O produto foi excluído com sucesso.", "success");-->
+                <!--}, 2000);-->
+            <!--});-->
+        <!--}-->
+    <!--</script>-->
+    <div th:replace="estilo/CadastroRapidoEstilo"></div>
 </section>
 
 
